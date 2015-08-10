@@ -1,0 +1,46 @@
+﻿@using FluentGrid.MvcHelper
+@model IList<WorkingDemo.Models.People>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron col-md-12">
+
+    <div class="row">
+
+       @Html.TextBox("Name")
+        <input id="Search" type="button" value="Search" />
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Fluent Grid Example</h2>
+            <div class="col-lg-12">
+                @(Html.FluentGrid(Model)
+                                   .Title("My Grid")
+                                   .Id("FluentGrid")
+                                   .PazeSize(15)
+                                   .ListAction(Url.Action("GetData"))
+                                   .CreateAction(Url.Action("AddInfo"))
+                                   .UpdateAction(Url.Action("UpdateInfo"))
+                                   .AddColumns(x =>
+                                   {
+                                       x.Bind(m => m.ID).Key().Title("Person ID").Width(1)
+                                        .Bind(m => m.Name).Title("Person Name").EnableEdit().EnableCreate().Width(5).Sorting()
+                                        .Bind(m => m.DOB).Title("Date Of Birth").Type("date").DisplayFormat("dd-mm-yy").EnableEdit().EnableCreate()
+                                        .Custom("TestColumn","'<a href=#>'+data.record.Name+'</a>'").Title("Test Column");
+                                   })
+                )
+
+            </div>
+        </div>
+    </div>
+</div>
+      <script> 
+          //Re-load records when user click 'load records' button.
+          $('#Search').click(function (e) {
+              e.preventDefault();
+              $('#FluentGrid').jtable('load', {
+                  name: $('#Name').val()
+              });
+          });
+      </script>

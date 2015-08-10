@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentGrid", "FluentGrid\FluentGrid.csproj", "{908FCCB9-9BF4-481E-BC21-0A3D21FBAAED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingDemo", "WorkingDemo\WorkingDemo.csproj", "{1AA8EE97-69E0-4BBE-9D39-F73C7F582D85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4AD2F64-F174-4584-8CB8-423E7BF1A1B4}"
+	ProjectSection(SolutionItems) = preProject
+		License.txt = License.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{908FCCB9-9BF4-481E-BC21-0A3D21FBAAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908FCCB9-9BF4-481E-BC21-0A3D21FBAAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908FCCB9-9BF4-481E-BC21-0A3D21FBAAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908FCCB9-9BF4-481E-BC21-0A3D21FBAAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA8EE97-69E0-4BBE-9D39-F73C7F582D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA8EE97-69E0-4BBE-9D39-F73C7F582D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA8EE97-69E0-4BBE-9D39-F73C7F582D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA8EE97-69E0-4BBE-9D39-F73C7F582D85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
