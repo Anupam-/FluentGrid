@@ -27,7 +27,7 @@
                                        x.Bind(m => m.ID).Key().Title("Person ID").Width(1)
                                         .Bind(m => m.Name).Title("Person Name").EnableEdit().EnableCreate().Width(5).Sorting()
                                         .Bind(m => m.DOB).Title("Date Of Birth").Type("date").DisplayFormat("dd-mm-yy").EnableEdit().EnableCreate()
-                                        .Custom("TestColumn","'<a href=#>'+data.record.Name+'</a>'").Title("Test Column");
+                                        .Custom("TestColumn","'<a href=#>'+data.record.Name+'</a>'").Title("Custom Column");
                                    })
                 )
 

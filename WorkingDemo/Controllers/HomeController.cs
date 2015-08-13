@@ -46,18 +46,23 @@ namespace WorkingDemo.Controllers
 
         public JsonResult GetData(int jtStartIndex = 0, int jtPageSize = 0, string name=null, string jtSorting = null)
         {
+            // record count along with filter and paging
+            int recordCount = 0;
             try
-            {        
+            {      
 
                 IEnumerable<People> data = _peoples;
 
                 if (!string.IsNullOrEmpty(name))
                 {
-                    data = data.Where(x => x.Name.Contains(name));
+                    // ignoring cases
+                    data = data.Where(x => x.Name.ToLower().Contains(name.ToLower())).ToList();
                 }
 
                 if (jtSorting != null)
                 {
+                    recordCount = data.Count();
+
                     if (jtSorting.Equals("Name DESC"))
                     {
                         data = data.Skip(jtStartIndex).Take(jtPageSize).OrderByDescending(x => x.Name);
@@ -71,12 +76,13 @@ namespace WorkingDemo.Controllers
                 }
                 else
                 {
-                    data = _peoples.Skip(jtStartIndex).Take(jtPageSize);
+                    recordCount = data.Count();
+                    data = data.Skip(jtStartIndex).Take(jtPageSize);
                 }
                
 
 
-                    return Json(new { Result = "OK", Records = data, TotalRecordCount = data.Count() });
+                    return Json(new { Result = "OK", Records = data, TotalRecordCount = recordCount });
             }
             catch (Exception ex)
             {
