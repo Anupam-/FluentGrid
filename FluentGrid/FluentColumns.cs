@@ -33,10 +33,10 @@ namespace FluentGrid
         public int Width { get; set; } 
         public string Type { get; set; }
         public string DisplayFormat { get; set; }
-        public Status Shorting { get; set; } = Status.@false;
-        public Status EnableCreate { get; set; } = Status.@false;
-        public Status EnableEdit { get; set; } = Status.@false;
-        public Status Key { get; set; } = Status.@false;
+        public Status Shorting { get; set; } 
+        public Status EnableCreate { get; set; }
+        public Status EnableEdit { get; set; } 
+        public Status Key { get; set; } 
         public string CustomColumnFormat { get; set; } 
         public bool IsCustomColumn { get; set; }
     }
