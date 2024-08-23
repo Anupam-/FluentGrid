@@ -2,6 +2,8 @@
 FluentGrid is an Mvc grid helper with paging,searching ,sorting ,filtering and many more. This mvc helper is built upon JTable and uses Jquery to work with asynchronus requests.  
 
 # Usase
+
+```
    @(Html.FluentGrid(Model)
             .Title("My Grid")
             .Id("FluentGrid")
@@ -17,3 +19,4 @@ FluentGrid is an Mvc grid helper with paging,searching ,sorting ,filtering and m
                       .Custom("TestColumn","'<a href=#>'+data.record.Name+'</a>'").Title("Custom Column");
                   })
                 )
+```
